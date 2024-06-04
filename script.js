@@ -6,7 +6,7 @@ let img_Reproved = '<img src="./images/reprovado.png" alt="Emoji Triste"/>';
 let activity = [];
 let notes = [];
 let lines = '';
-let minNote = prompt("Digite a Nota mínima:")
+
 
 
 
@@ -33,7 +33,7 @@ function addlines(){
         let line = `<tr>
                         <td>${activity_name.value}</td>
                         <td>${activity_note.value}</td>
-                        <td>${activity_note.value >= minNote ? img_Approved : img_Reproved}</td>
+                        <td>${activity_note.value >= 6 ? img_Approved : img_Reproved}</td>
                     </tr>`;
         lines += line;
 
@@ -59,7 +59,7 @@ function update_note() {
     let resul2 = document.getElementById("average_final_result");
 
     
-    if (average_final >= minNote) {
+    if (average_final >= 6) {
        
         resul2.innerHTML = "Aprovado";
         resul2.style.backgroundColor = "green";
